@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby
 # Written by Rick Flores (nanotechz9l)
+# Both the two-liner, and one-liner methods were provided to me via the awesome community on Stack Overflow.
+# By: Darshan Computing, Julien Langlois, and pjs.
+# http://stackoverflow.com/questions/16206010/trying-to-use-an-inclusive-range-with-securerandom-random-number-ruby-2-0-0
+
 require 'rainbow.rb'
 require 'securerandom'
 
@@ -35,12 +39,28 @@ ___________________________________________
 -------------------------------------------
 =end
 
+=begin
+### Long way to do it
 quick_pick = 56
 mega_num   = 46
 
+first  = rand(1..56)
+second = rand(1..56)
+third  = rand(1..56)
+fourth = rand(1..56)
+fifth  = rand(1..56)
+mega   = rand(1..46)
+puts "\nYour MEGA MILLIONS numbers are".foreground(:cyan).bright + " #{first}".foreground(:white).bright + ",".foreground(:cyan).bright + " #{second}".foreground(:white).bright + ",".foreground(:cyan).bright + " #{third}".foreground(:white).bright + ",".foreground(:cyan).bright + " #{fourth}".foreground(:white).bright + ",".foreground(:cyan).bright + " and".foreground(:cyan).bright + " #{fifth}".foreground(:white).bright + " with a mega number of".foreground(:cyan).bright + " #{mega}\n".foreground(:red).bright
+=end
+
+=begin
+### 2 liner
 five = 5.times.collect { SecureRandom.random_number(quick_pick - 1) + 1 }
 six  = 1.times.collect { SecureRandom.random_number(mega_num   - 1) + 1 }
-
-puts "\nMEGA MILLIONS QUICK PICKS NUMBERS GENERATOR".foreground(:white).bright
 puts "YOUR NUMBERS ARE: ".foreground(:cyan).bright + five.join(', ') + " MEGA = #{six}".foreground(:red).bright
-puts "Good luck!".foreground(:white).bright
+=end
+
+### 1 liner | Best method...!
+puts "\nMEGA MILLIONS QUICK PICKS NUMBERS GENERATOR".foreground(:white).bright
+puts 5.times.collect{SecureRandom.random_number(55) + 1}.push(SecureRandom.random_number(45) + 1).join(', ')
+puts "Good luck!".foreground(:red).bright.blink
