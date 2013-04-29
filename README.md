@@ -17,7 +17,7 @@ You *MUST install the rainbow gem for the pretty colorized output seen above:
 	./mega_millions.rb
 	
 
-	## Features
+## Features
 * Shell / Commandline (CLI) application allowing:
 	* Rapid selection of Mega Millions quickpick number scheme 1-5 / 1..56
 	* Instant selection of Mega Millions Mega number scheme 1 / 1..46
