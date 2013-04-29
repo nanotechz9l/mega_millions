@@ -8,6 +8,7 @@ A simple mega millions + mega number generator.
 ## Pre Reqs
 
 You *MUST install the rainbow gem for the pretty colorized output seen above:
+
 	gem install rainbow
 	
 	require 'rainbow'
