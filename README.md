@@ -26,6 +26,7 @@ You *MUST install the rainbow gem for the pretty colorized output seen above:
 ## Requirements
 * Tested on ruby version/s:
 	* ruby 2.0.0p0 (2013-02-24 revision 39474)
+	
 	* ruby 1.9.3
 
 ## History
@@ -33,7 +34,7 @@ You *MUST install the rainbow gem for the pretty colorized output seen above:
 * 04/06/2013 - Updated code 
 
 ## To Do
-* Possible GUI enhancements in the future
+* Possible GUI interface in the future
 
 ## Credits
 * Rick Flores (nanotechz9l) -- 0xnanoquetz9l[--at--]gmail.com
