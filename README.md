@@ -25,9 +25,8 @@ You *MUST install the rainbow gem for the pretty colorized output seen above:
 
 ## Requirements
 * Tested on ruby version/s:
-
-	*ruby 2.0.0p0 (2013-02-24 revision 39474)
-	*ruby 1.9.3
+	* ruby 2.0.0p0 (2013-02-24 revision 39474)
+	* ruby 1.9.3
 
 ## History
 * 04/29/2013 - Major overhaul
