@@ -1,18 +1,17 @@
 #!/usr/bin/env ruby
 # Written by Rick Flores (nanotechz9l)
 
-require 'rainbow.rb'
-require 'securerandom'
+require 'securerandom';require 'rainbow.rb'
 
 =begin
 
-Mega Millions drawings are held Tuesday and Friday at 8:00 p.m PST. 
-Five balls are drawn from a set of balls numbered 1 through 56; 
-one ball is drawn from a set of balls numbered 1 through 46. 
-You win if the numbers on one row of your ticket match the numbers of the balls drawn on that date. 
-There are nine ways to win a prize, from $2 to the jackpot. 
-If no one wins the jackpot, the money is added to the jackpot for the next drawing. 
-Overall chances of winning a prize are 1 in 40.
+  Mega Millions drawings are held Tuesday and Friday at 7:59 p.m PST. 
+  Five balls are drawn from a set of balls numbered 1 through 75; 
+  one ball is drawn from a set of balls numbered 1 through 15. 
+  You win if the numbers on one row of your ticket match the numbers of the balls drawn on that date. 
+  There are nine ways to win a prize, from $2 to the jackpot. 
+  If no one wins the jackpot, the money is added to the jackpot for the next drawing. 
+  Overall chances of winning a prize are 1 in 40.
 
 Ref: http://www.megamillions.com/
 ___________________________________________
@@ -36,19 +35,19 @@ ___________________________________________
 -------------------------------------------
 =end
 
-=begin
-### Long way to do it
-quick_pick = 56
-mega_num   = 46
 
-first  = rand(1..56)
-second = rand(1..56)
-third  = rand(1..56)
-fourth = rand(1..56)
-fifth  = rand(1..56)
-mega   = rand(1..46)
-puts "\nYour MEGA MILLIONS numbers are".foreground(:cyan).bright + " #{first}".foreground(:white).bright + ",".foreground(:cyan).bright + " #{second}".foreground(:white).bright + ",".foreground(:cyan).bright + " #{third}".foreground(:white).bright + ",".foreground(:cyan).bright + " #{fourth}".foreground(:white).bright + ",".foreground(:cyan).bright + " and".foreground(:cyan).bright + " #{fifth}".foreground(:white).bright + " with a mega number of".foreground(:cyan).bright + " #{mega}\n".foreground(:red).bright
-=end
+### Long way to do it
+
+## TO-DO:
+# implement the most effective level of randomness. Testing could be done with Burp, and other methods. 
+
+first  = SecureRandom.random_number(75) + 1 # <= needed to start the integer return value at 1 vs 0.
+second = SecureRandom.random_number(75) + 1
+third  = SecureRandom.random_number(75) + 1
+fourth = SecureRandom.random_number(75) + 1
+fifth  = SecureRandom.random_number(75) + 1
+mega   = SecureRandom.random_number(15) + 1
+puts "\n Mega millions numbers (updated to reflect the new number scheme of 5 numbers from 1..75, and mega 1..15)\n".foreground(:yellow).bright + " #{first}".foreground(:white).bright + ", ".foreground(:cyan).bright + " #{second}".foreground(:white).bright + ", ".foreground(:cyan).bright + " #{third}".foreground(:white).bright + ", ".foreground(:cyan).bright + " #{fourth}".foreground(:white).bright + ", ".foreground(:cyan).bright + " #{fifth}".foreground(:white).bright + ", ".foreground(:cyan).bright + "MEGA ".foreground(:white).bright + "#{mega}\n".foreground(:red).bright.underline
 
 
 # Both the two-liner, and one-liner methods were provided to me via the awesome community on Stack Overflow.
@@ -63,4 +62,4 @@ puts "YOUR NUMBERS ARE: ".foreground(:cyan).bright + five.join(', ') + " MEGA = 
 =end
 
 ### True 1 liner
-puts "\nMEGA MILLIONS QUICK PICKS NUMBERS GENERATOR".foreground(:white).bright; puts 5.times.collect{SecureRandom.random_number(55) + 1}.push(SecureRandom.random_number(45) + 1).join(', '); puts "Good luck!".foreground(:red).bright.blink
+#puts "\nMEGA MILLIONS QUICK PICKS NUMBERS GENERATOR".foreground(:white).bright; puts 5.times.collect{SecureRandom.random_number(75) + 1}.push(SecureRandom.random_number(1clear5) + 1).join(', '); puts "Good luck!".foreground(:red).bright.blink
