@@ -47,7 +47,7 @@ third  = SecureRandom.random_number(75) + 1
 fourth = SecureRandom.random_number(75) + 1
 fifth  = SecureRandom.random_number(75) + 1
 mega   = SecureRandom.random_number(15) + 1
-puts "\n Mega millions numbers (updated to reflect the new number scheme of 5 numbers from 1..75, and mega 1..15)\n\n".foreground(:yellow).bright + " #{first}".foreground(:white).bright + ", ".foreground(:cyan).bright + " #{second}".foreground(:white).bright + ", ".foreground(:cyan).bright + " #{third}".foreground(:white).bright + ", ".foreground(:cyan).bright + " #{fourth}".foreground(:white).bright + ", ".foreground(:cyan).bright + " #{fifth}".foreground(:white).bright + ", ".foreground(:cyan).bright + "MEGA ".foreground(:white).bright + "#{mega}\n".foreground(:red).bright.underline
+puts "\n Mega millions numbers (updated to reflect the new number scheme of 5 numbers from 1..75, and mega 1..15)\n\n".foreground(:yellow).bright + " #{first}".foreground(:white).bright + ", ".foreground(:cyan).bright + " #{second}".foreground(:white).bright + ", ".foreground(:cyan).bright + " #{third}".foreground(:white).bright + ", ".foreground(:cyan).bright + " #{fourth}".foreground(:white).bright + ", ".foreground(:cyan).bright + " #{fifth}".foreground(:white).bright + ", ".foreground(:cyan).bright + "MEGA = ".foreground(:white).bright + "#{mega}\n".foreground(:red).bright.underline
 
 
 # Both the two-liner, and one-liner methods were provided to me via the awesome community on Stack Overflow.
