@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # Written by Rick Flores (nanotechz9l)
 
-require 'securerandom';require 'rainbow.rb'
+require 'securerandom';require 'rainbow/ext/string'
 
 =begin
 
